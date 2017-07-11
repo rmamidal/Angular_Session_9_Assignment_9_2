@@ -28,8 +28,9 @@ export class MovieComponent {
     }
 
     // Adding movie to movie list
-    addMovie() {
+    addMovie(formMovie) {
         this._movieService.addMovie(this.currentMovie);
         this.currentMovie = new Movie(); // Clearing Object.
+        formMovie.reset(); // Reset form after submiting Movie info.
     }
 }
